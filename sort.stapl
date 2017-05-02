@@ -1,0 +1,57 @@
+stack aux
+
+push 256
+set n
+
+fun rand
+rand
+get n
+push 0
+if gt
+	pop
+	push 1
+	sub
+	set n
+	call rand
+end
+
+pop
+pop
+
+fun extract % Move all stack entries to aux stack %
+	if empty
+		call insert
+	end
+
+	store aux
+	call extract
+
+fun insert % Insert values back into main stack %
+	size aux
+	push 0
+	if eq % Check if aux stack is empty %
+		pop
+		pop
+		call done
+	end
+	pop
+	pop
+
+	if empty % Check if this is the first value to be inserted back %
+		load aux
+		call insert
+	end
+
+	load aux
+	fun swap % Swap until in the right place %
+		if gt
+			set tmp
+			store aux
+			get tmp
+			call swap
+		end
+	call insert
+
+fun done
+printstack
+ret

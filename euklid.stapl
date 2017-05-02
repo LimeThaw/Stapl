@@ -1,0 +1,45 @@
+push "Please insert 2 numbers:"
+prints	% Print input prompt %
+pops
+
+read	% Read first number %
+stof
+read	% Read second number %
+stof
+set a	% Save them in variables %
+set b
+
+get a	% Check for zeroes in input %
+push 0
+if eq
+	get b
+	ret
+end
+
+fun loop	% Main algorithm loop %
+
+	get b
+	push 0
+	if eq		% Check for termination condition %
+		get a
+		ret
+	end
+	pop
+
+	get a
+	push 0
+	if eq
+		get b
+		ret
+	end
+	pop
+
+	if lt		% Case 1 %
+		get b
+		mod
+		set a
+		call loop
+	end
+	mod			% Case 2 %
+	set b
+	call loop

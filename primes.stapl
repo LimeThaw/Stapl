@@ -1,0 +1,58 @@
+push "Upper bound for primes:"
+prints
+pops
+
+%read
+stof%
+push 10000
+set n
+
+push 2	% Start checking for primes at 2 %
+set i
+
+fun main_loop
+	push 2	% Start checking for factors at 2 %
+	set k
+
+	fun loop1
+		get i
+		get k
+
+		if eq	% Did we already reach i? %
+			pop
+			print
+			call loop1_end
+		end
+
+		mod		% Does k divide i? %
+		push 0
+		if eq
+			pop
+			call loop1_end
+		end
+
+		pop
+		pop
+		get k
+		push 1
+		add
+		set k
+		call loop1
+
+	fun loop1_end
+	pop
+
+	get i	% Increment i %
+	push 1
+	add
+	set i
+
+	get n	% Stop at n %
+	get i
+	if eq
+		ret
+	end
+	pop
+	pop
+
+	call main_loop	% Otherwise go for the next! %

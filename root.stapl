@@ -1,0 +1,45 @@
+push "Gimme a float: "
+prints
+pops
+
+read
+stof
+cpy
+set goal % Read square to compute the root of %
+push 2
+div
+set last_val % Take initial guess as half. %
+
+get last_val
+get goal
+call newt_it
+fun ret
+cpy
+get last_val
+sub
+push 0
+if eq % Check for termination criterion %
+	pop
+	pop
+	print
+	ret
+end
+pop
+pop
+cpy
+set last_val
+print
+get goal
+call newt_it % If not terminating go for another round %
+
+fun newt_it % Compute one step of the newton iteration %
+	set a
+	set xn
+	push 0.5
+	get xn
+	get a
+	get xn
+	div
+	add
+	mul
+	call ret

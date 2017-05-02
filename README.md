@@ -166,9 +166,9 @@ implement with only a single stack.
 
 	Pushes the value of the variable *var* on top of the stack. *var* must be *set* before.
 
-  push 3
-  set var
-  get var
+	  push 3
+	  set var
+	  get var
 
 - stack *name*
 
@@ -190,19 +190,19 @@ implement with only a single stack.
 
 	Pushes the length of the given storage stack to the main stack. Blah, blah, initialize, blah.
 
-  stack mystack
+	  stack mystack
 
-  push 1
-  push 2
+	  push 1
+	  push 2
 
-  store mystack
-  store mystack
-  load mystack
-  size mystack
+	  store mystack
+	  store mystack
+	  load mystack
+	  size mystack
 
-  if eq
-    push "Now only 2 is in mystack."
-  end
+	  if eq
+		  push "Now only 2 is in mystack."
+	  end
 
 
 ## Interaction
@@ -228,31 +228,30 @@ features!
 	Reads a string from the standard input and pushes it to the main stack in zero-terminated
 	form (just like *push* with a string).
 
+	  push "Please input a number: "
+	  prints
+	  pops
 
-  push "Please input a number: "
-  prints
-  pops
+	  read
+	  stof
 
-  read
-  stof
+	  push "Your number is: "
+	  prints
+	  pops
 
-  push "Your number is: "
-  prints
-  pops
-
-  print
+	  print
 
 <!-- Seperating the two code blocks -->
 
-  push "What's your name?"
-  prints
-  pops
+	push "What's your name?"
+	prints
+	pops
 
-  read
+	read
 
-  push "Hello "
-  pops
-  prints
+	push "Hello "
+	pops
+	prints
 
 
 ## Building

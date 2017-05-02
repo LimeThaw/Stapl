@@ -130,7 +130,7 @@ would belong in here... Oh well.
 
 	A classic if struct. *cond* must be *eq*, *gt*, *lt* or *empty*. If the condition is true, the
 	code in [...] will be executed. Otherwise execution resumes at *end*. With a1 being the second
-	to last number on the stack and a2 being the last, the conditions are:<br/><br/>
+	to last number on the stack and a2 being the last, the conditions are:<br/>
 	*eq*: a1 == a2<br/>
 	*lt*: a1 < a2<br/>
 	*gt*: a1 > a2<br/>
@@ -166,10 +166,9 @@ implement with only a single stack.
 
 	Pushes the value of the variable *var* on top of the stack. *var* must be *set* before.
 
-
-	push 3
-	set var
-	get var
+	  push 3
+	  set var
+	  get var
 
 - stack *name*
 
@@ -192,19 +191,19 @@ implement with only a single stack.
 	Pushes the length of the given storage stack to the main stack. Blah, blah, initialize, blah.
 
 
-	stack mystack
+	  stack mystack
 
-	push 1
-	push 2
+	  push 1
+	  push 2
 
-	store mystack
-	store mystack
-	load mystack
-	size mystack
+	  store mystack
+	  store mystack
+	  load mystack
+	  size mystack
 
-	if eq
-		push "Now only 2 is in mystack."
-	end
+	  if eq
+		  push "Now only 2 is in mystack."
+	  end
 
 
 ## Interaction
@@ -231,18 +230,18 @@ features!
 	form (just like *push* with a string).
 
 
-	push "Please input a number: "
-	prints
-	pops
+	  push "Please input a number: "
+	  prints
+	  pops
 
-	read
-	stof
+	  read
+	  stof
 
-	push "Your number is: "
-	prints
-	pops
+	  push "Your number is: "
+	  prints
+	  pops
 
-	print
+	  print
 
 <!-- Seperating the two code blocks -->
 
@@ -273,7 +272,8 @@ trouble compiling your code.
 ## Misc
 
 I also included some example codes. root.stapl takes a number and computes its square root,
-sort.stapl generates an array of random numbers and sorts it, and primes.stapl takes an upper
+sort.stapl generates an array of random numbers and sorts it, euklid.stapl takes two numbers and
+uses the euklidean algorithm to find their greatest common divisor, and primes.stapl takes an upper
 bound and lists all prime numbers smaller than this bound.
 
 If you have any further questions message me or shoot me an email to laudit@student.ethz.ch.

@@ -274,7 +274,7 @@ sort.stapl generates an array of random numbers and sorts it, euklid.stapl takes
 uses the euklidean algorithm to find their greatest common divisor, and primes.stapl takes an upper
 bound and lists all prime numbers smaller than this bound.
 
-If you have any further questions message me or shoot me an email to laudit@student.ethz.ch.
+If you have any further questions message me or shoot me an email to timolaudi@gmail.com.
 
 
 [link_stack]: https://en.wikipedia.org/wiki/Stack_(abstract_data_type)
